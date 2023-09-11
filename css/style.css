@@ -42,8 +42,8 @@ html{
 }
 .heading div{
     display: inline-block;
-    border-bottom: 0.2rem solid var(--th-color);
-    width: 15rem;
+    border-bottom: 0.1rem solid var(--th-color);
+    width: 40%;
 }
 .heading div:hover{
     width: 25rem;
@@ -58,7 +58,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 2%;
-    background: rgba(10, 10, 9, 0.9);
+    background: #000;
     z-index: 1001;
 }
 header .logo{
@@ -97,6 +97,7 @@ header .fa-bars{
     right: 0;
 }  
 .home .home-slid .box .content{
+    width: 100%;
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50% , -50%);
@@ -108,7 +109,7 @@ header .fa-bars{
 }
 .home .home-slid .box .content p{
     font-size: 2.5rem;
-    margin: 1rem 0;
+    margin: 3rem 0;
 }
 .about{
     background: #eee;
@@ -121,7 +122,7 @@ header .fa-bars{
     margin-top: 7rem;
 }
 .about .box .image img{
-    width: 30rem;
+    width: 20rem;
     height: 100%;
     object-fit: cover;
 }
@@ -223,21 +224,25 @@ align-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
     padding: 2rem;
+    align-items: center;
 }
 .footer h3{
     font-size: 1.8rem;
     margin: 2rem 0;
     color: var(--min-color);
+    text-align: center;
 }
 .footer p{
     font-size: 1.6rem;
     margin: 1rem 0;
     color: var(--min-color);
+    text-align: center;
 }
 .footer i{
     font-size: 2.6rem;
     margin: 1rem 0.5rem;
     color: var(--min-color);
+    text-align: center;
 }
 .footer i:hover,
 .footer a:hover{
@@ -257,12 +262,13 @@ align-items: center;
 
     header .fa-bars{
         display: block;
+
     }
     header .navbar{
         position: fixed;
         /* */ top: 1000rem; left: 0; 
         text-align: center;
-        background: rgba(10, 10, 9, 0.6);
+        background: #000;
         width: 100%;
     }
     header .navbar.active{
@@ -278,12 +284,23 @@ align-items: center;
     header .navbar a:hover{
         background: var(--min-color);
     }
+
+    .heading{
+        margin: 8rem 0;
+        font-size: 2.5rem;
+    }
+    .heading div {
+        width: 90%;
+    }
+    .about .box .content h3{
+        font-size: 2.5rem;
+    }
     .about .box{
         flex-wrap: wrap;
         text-align: center;
     }
     .about .box .image img{
-        width: 90%;
+        width: 70%;
     }
     .services .row{
     
@@ -303,12 +320,14 @@ align-items: center;
     }
     .footer{
 
-        grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+        padding: 0 2rem;
     }
 }
 @media(max-width:550px){
     .portfolio .row{
         
-        grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+        padding: 0 2rem;
     }
 }
